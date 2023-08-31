@@ -1,0 +1,25 @@
+deployment: {
+    phases: {
+      step1: {
+        docker compose -> execute dockerfile -> build app -> create docker images
+      }
+      step2: {
+          sh scripts -> push image to ecr
+      }
+      step3: {
+        terraform: {
+          apply -> create infra
+          apply -> create networks
+          apply -> create security groups
+          apply -> set IAM permissions
+          apply -> file provisoner -> execute -> deploy-scripts
+          deploy-scripts -> ecr to ec2 docker containers
+        }
+      }
+      step1 -> step2 -> step3
+    }
+  }
+  deployment.style.stroke: "deepskyblue"
+  direction: right
+  
+  

@@ -1,0 +1,25 @@
+direction: right
+
+architecture: {
+  AWS EC2: {
+    amplify: {
+      frontend: {
+        nextjsApp -> algolia
+        nextjsApp -> api: rest api
+      }
+    }
+
+    backend: {
+      containers: {
+        nodeApp -> db: {shape: cylinder}
+        nodeApp -> cloud watch
+      }
+    }
+
+    amplify -> redis -> backend
+  }
+}
+
+architecture.style.stroke: "#f4a261"
+
+
