@@ -1,29 +1,36 @@
-style: {
-  fill: LightBlue
-  stroke: FireBrick
-  stroke-width: 2
-}
-
-architecture.style.stroke: "#f4a261"
 architecture: {
-  AWS EC2: {
-    amplify: {
-      frontend: {
-        nextjsApp -> algolia
-        nextjsApp -> api: rest api
+  frontend: {
+    aws amplify: {
+      nextjs app <-> algolia
+      nextjs app <-> api: rest api {
+        style.animated: true
+        style: {
+          font-size: 44
+        }
       }
+      *.style.stroke: "black"
     }
-
-    backend: {
-      containers: {
-        nodeApp -> db: {shape: cylinder}
-        nodeApp -> cloud watch
-      }
-    }
-
-    amplify -> redis -> backend
+    *.style.stroke: "black"
   }
+  frontend.style.stroke: "blue"
+  frontend.style.stroke-width: "3"
+
+  backend: {
+    aws ec2: {
+      containers: {
+        redis <-> pm2.node app <-> db: {shape: cylinder}
+        pm2.node app -> cloud watch
+        *.style.stroke: "black"
+      }
+      *.style.stroke: "black"
+    }
+    *.style.stroke: "black"
+  }
+  frontend <-> backend.aws ec2.containers.redis: {style.animated: true}
+  backend.style.stroke: "red"
+  backend.style.stroke-width: "3"
 }
+architecture.style.stroke-width: "3"
 
 deployment: {
   phases: {
@@ -31,26 +38,24 @@ deployment: {
       docker compose -> execute dockerfile -> build app -> create docker images
     }
     step2: {
-        sh scripts -> push image to ecr
+      sh scripts -> push image to ecr
     }
     step3: {
-      terraform: {
-        apply -> create infra
-        apply -> create networks
-        apply -> create security groups
-        apply -> set IAM permissions
-        apply -> file provisoner -> execute -> deploy-scripts
-        deploy-scripts -> ecr to ec2 docker containers
-      }
+      terraform apply -> EC2.create infra
+      terraform apply -> EC2.create networks
+      terraform apply -> EC2.create security groups
+      terraform apply -> EC2.set IAM permissions
+      terraform apply -> file provisoner -> remote-execute -> sh scripts
+      sh scripts -> ecr to ec2 docker containers
     }
     step1 -> step2 -> step3
   }
 }
-deployment.style.stroke: "deepskyblue"
+*.style.stroke: "black"
 
-**:{
+**: {
+  style.fill: white
+  style.font: mono
   style.font-size: 60
+  style.border-radius: 7
 }
-
-
-
