@@ -1,0 +1,61 @@
+# Specified so that objects are written in row-dominant order
+grid-rows: 2
+grid-columns: 2
+grid-gap: 0
+
+classes: {
+  header: {
+    style.underline: true
+  }
+}
+
+Features.class: header
+Type.class: header
+
+Security
+helmet, csrf, cors, api rate limiting
+
+App-scaling
+app scales using pm2 inside docker container, flexible architecture so it can be migrated to ECS
+
+Login
+next-auth and jwt login
+
+Notifications
+toasters and loaders on FE
+
+DB
+mongo - user specific db based on email and public db
+
+HTML
+responsive css
+
+Search
+algolia
+
+Pages
+user courses and teacher courses, blog pages etc
+
+Detailed view
+course and blog details with social share and disqus comments
+
+Payment options
+razor pay integration
+
+CMS
+custom history page for logged in user with search by name, date and category tags, single or multi delete articles
+
+Sidebar
+show popular blogs by tags and tag count
+
+Cache layer
+redis between FE and BE
+
+Email
+node mailer to send email to user about course
+
+User management
+profile, enrolled courses, password reset option
+
+Datatables
+Next-ui
