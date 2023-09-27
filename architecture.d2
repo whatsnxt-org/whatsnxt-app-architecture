@@ -21,7 +21,7 @@ architecture: {
       containers: {
         redis <-> pm2.node app <-> db: {shape: cylinder}
         pm2.node app -> cloud watch -> logs
-        pm2.node app -> cloud watch -> alarms
+        pm2.node app -> cloud watch -> alarms -> sns
         *.style.stroke: "black"
       }
       *.style.stroke: "black"
