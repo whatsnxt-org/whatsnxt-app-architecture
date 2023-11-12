@@ -1,6 +1,6 @@
 # Whatsnxt
 
-[App](https://whatsnxt.in/)
+[Checkout the app here](https://whatsnxt.in/)
 
 Whatsnxt is a learning provider where students can opt for online courses or live online training
 
@@ -39,6 +39,8 @@ npm run local
 whatsnxt is currently extended with the following features.
 Instructions on how to use them in your own application are linked below.
 
+[Checkout the app here](https://whatsnxt.in/)
+
 | Features | README |
 | ------ | ------ |
 | Security | helmet, csrf, cors, api rate limiting |
@@ -68,6 +70,8 @@ Pushes the images in to AWS ecr and creates infra using terraform
 
 
 # Whatsnxt-blog
+
+[Checkout the app here](https://blog.whatsnxt.in/)
 
 Whatsnxt-blog is a blog and tutorial app to create rich content and tutorials respectively.
 
