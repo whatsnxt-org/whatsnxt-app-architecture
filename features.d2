@@ -1,6 +1,6 @@
 # Specified so that objects are written in row-dominant order
-grid-rows: 2
-grid-columns: 2
+grid-rows: 4
+grid-columns: 4
 grid-gap: 0
 
 classes: {
@@ -16,7 +16,7 @@ Security
 helmet, csrf, cors, api rate limiting
 
 App-scaling
-app scales using pm2 inside docker container, flexible architecture so it can be migrated to ECS
+app scales using Nodejs pm2 clusterin inside docker container
 
 Login
 next-auth and jwt login
@@ -52,7 +52,7 @@ Cache layer
 redis between FE and BE
 
 Email
-node mailer to send email to user about course
+Node mailer to send email to user about course
 
 User management
 profile, enrolled courses, password reset option
@@ -60,8 +60,14 @@ profile, enrolled courses, password reset option
 Datatables
 next-ui
 
-Comments and conversations
-disqus comments library
+Comments and nested replies
+Nextjs Comments, nested replies component, Backend logic was implemented using Model Tree Structures with an Array of Ancestors in mongodb
+
+Performance
+Mongo Schema fields are indexed selectively to increase the read query Performance of the app
+
+Page views
+Google analytics to analyse page views and visitors
 
 
 *: {
