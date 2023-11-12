@@ -1,5 +1,7 @@
 # Whatsnxt
 
+[App](https://whatsnxt.in/)
+
 Whatsnxt is a learning provider where students can opt for online courses or live online training
 
 - Latest tech courses
