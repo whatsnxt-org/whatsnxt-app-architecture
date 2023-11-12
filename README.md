@@ -114,8 +114,7 @@ Instructions on how to use them in your own application are linked below.
 | Custom CMS | custom history page for logged in user with search by name, date and category tags, single or multi delete articles|
 | Sidebar | show popular blogs by tags and tag count |
 | Cache | redis between FE and BE |
-| Email | Node mailer to send email to user about course |
-| User management | profile, enrolled courses, password reset option |
+| User management | profile, password reset option |
 | Data tables | next-ui |
 | Comments and nested replies | Nextjs Comments, nested replies, like amd dislike component, Backend logic was implemented using Model Tree Structures with an Array of Ancestors in mongodb |
 | Performance | Mongo Schema fields are indexed selectively to increase the read query Performance of the app |
