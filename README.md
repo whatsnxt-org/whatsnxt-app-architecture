@@ -1,6 +1,6 @@
 # Whatsnxt
 
-[Checkout the app here](https://whatsnxt.in/)
+[Checkout the app here](https://www.whatsnxt.in/)
 
 Whatsnxt is a video based learning platform along with relevant articles and tutorial series to create rich quality content. App also faciliates trainer search and consulting for other business or users
 
@@ -39,7 +39,7 @@ npm run local
 whatsnxt is currently extended with the following features.
 Instructions on how to use them in your own application are linked below.
 
-[Checkout the app here](https://whatsnxt.in/)
+[Checkout the app here](https://www.whatsnxt.in/)
 
 | Features | README |
 | ------ | ------ |
